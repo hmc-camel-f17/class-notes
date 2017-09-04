@@ -38,17 +38,21 @@ bool isPalindrome(string text /**< Candidate palindrome.*/)
     // all letters to the lowercase. After checking each character we, bail
     // early if we find a mismatch.
     while (left < right) {
-        if (isalpha(text[left]) == 0) {
+        while (isalpha(text[left]) == 0) {
             ++left;
+            print("left isn't a letter")
         }
-        if (isalpha(text[right]) == 0) {
+        
+        while (isalpha(text[right]) == 0) {
             --right;
+            print("right isn't a letter")
         }
     
         if (tolower(text[left]) != tolower(text[right])) {
+            print("False")
             return false;
         }
-
+        print("changing left and right values")
         ++left;
         --right;
     }

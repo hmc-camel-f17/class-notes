@@ -26,3 +26,15 @@ Bonus: >
 - Input:  sit on a potato pan, otis
   Output: Yay, that's a palindrome!
   Notes:  This example includes spaces and punctuation.
+
+- Input: Nurse, I spy gypsies! Run!
+  Output: Yay, that's a palindrome!
+  Notes: This is a good example because it uses uppercase letters and non letter characters. In addition it's also funny.
+  
+- Input: Dammit I'm mad!
+  Output: Yay, that's a palindrome!
+  Notes: This is a good example because it utilizes the features we added to the program (uppercase letters and punctuation). This was also our expression while figuring out github (Thanks Prof. Beth!)
+  
+- Input: We love C.S. 70!
+  Output: No, that's not a palindrome.
+  Notes: Although true, this is not a palindrome. It's a good example to show that the program doesn't always return true and it tests with numbers, punctuation, and capital letters.

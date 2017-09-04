@@ -38,14 +38,15 @@ bool isPalindrome(string text /**< Candidate palindrome.*/)
     // all letters to the lowercase. After checking each character we, bail
     // early if we find a mismatch.
     while (left < right) {
+        //Checking if the character is a letter
         while (isalpha(text[left]) == 0) {
             ++left;
         }
-        
         while (isalpha(text[right]) == 0) {
             --right;
         }
     
+        //Converting all letters into lowercase
         if (tolower(text[left]) != tolower(text[right])) {
             return false;
         }

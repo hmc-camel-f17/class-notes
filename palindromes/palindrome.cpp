@@ -40,19 +40,16 @@ bool isPalindrome(string text /**< Candidate palindrome.*/)
     while (left < right) {
         while (isalpha(text[left]) == 0) {
             ++left;
-            print("left isn't a letter")
         }
         
         while (isalpha(text[right]) == 0) {
             --right;
-            print("right isn't a letter")
         }
     
         if (tolower(text[left]) != tolower(text[right])) {
-            print("False")
             return false;
         }
-        print("changing left and right values")
+        
         ++left;
         --right;
     }

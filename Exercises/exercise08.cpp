@@ -8,7 +8,6 @@ bool checkRange(int value, int lowerBound, int upperBound) {
     if (value >= lowerBound && value <= upperBound) {
 	return true;
     }
-}
 
 
 int main() {

@@ -6,6 +6,7 @@ using std::endl;
 
 void sayHello();
     cout << "Hello" << endl;
+
 int main() {
     sayHello();
 

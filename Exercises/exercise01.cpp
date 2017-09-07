@@ -4,8 +4,9 @@ using namespace std;
 using std::cout;
 using std::endl;
 
-void sayHello();
+void sayHello(){
     cout << "Hello" << endl;
+}
 
 int main() {
     sayHello();

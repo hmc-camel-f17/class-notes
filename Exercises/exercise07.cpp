@@ -4,7 +4,7 @@ using std::cout;
 using std::endl;
 
 double addTwoNumbers(double x, double y) {
-    return x + x;
+    return x + y;
 }
 
 int main() {

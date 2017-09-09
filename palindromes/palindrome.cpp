@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -32,13 +33,24 @@ bool isPalindrome(string text /**< Candidate palindrome.*/)
     int right = text.length() - 1;      // rightmost unchecked character.
 
     // Check palindrome by moving left and right boundaries progressively
-    // closer until they finally meet or pass each other.  Bail early if
-    // we find a mismatch.
+    // closer until they finally meet or pass each other. If the character
+    // is not a letter, we move on to the right or left. We also convert
+    // all letters to the lowercase. After checking each character we, bail
+    // early if we find a mismatch.
     while (left < right) {
-        if (text[left] != text[right]) {
+        //Checking if the character is a letter
+        while (isalpha(text[left]) == 0) {
+            ++left;
+        }
+        while (isalpha(text[right]) == 0) {
+            --right;
+        }
+    
+        //Converting all letters into lowercase
+        if (tolower(text[left]) != tolower(text[right])) {
             return false;
         }
-
+        
         ++left;
         --right;
     }
